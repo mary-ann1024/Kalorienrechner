@@ -31,7 +31,7 @@
                 </div>
                 <br>
                 <div class="tooltip">
-                    <a class="click" href="wraps.html">Wraps</a>
+                    <a href="wraps.html">Wraps</a>
                     <span class="tooltiptext">2 Stück = ca. 581 kcal</span>
                 </div>
             </li>
@@ -125,17 +125,17 @@
                 <br>
                 <div class="tooltip">
                     <a href="apfelgrütze.html">Apfelgrütze mit Vanillesoße</a>
-                    <span class="tooltiptext">1 Portion = ca. 278 kcal</span>
+                    <span class="tooltiptext"></span>
                 </div>
                 <br>
                 <div class="tooltip">
-                    <a href="paradiesSchoko.html">Pradies Creme Schoko</a>
-                    <span class="tooltiptext">1 Portion = ca. 167 kcal</span>
+                    <a class="click" href="paradiesSchoko.html">Pradies Creme Schoko</a>
+                    <span class="tooltiptext"></span>
                 </div>
                 <br>
                 <div class="tooltip">
                     <a href="erdbeerenVanille.html">Erdbeeren und Vanillepudding</a>
-                    <span class="tooltiptext">1 Portion = ca. 190 kcal</span>
+                    <span class="tooltiptext"></span>
                 </div>
             </li>
         </ul>
@@ -284,62 +284,46 @@
     </div>
 
     <div class="context">
-
         <div class="title">
-            <h1>Selbstgemachter Flammkuchen</h1>
-            <p>Das Rezept ist für 4 Wraps.</p>
-            <p>1 Wrap = ca. 291 kcal. 2 Wraps = ca. 581 kcal (Portion pro Person)</p>
-            <img src="../img/wraps.jpg" alt="Wraps" width="513" height="342">
+            <h1>Paradies Creme Schoko</h1>
+            <p>Das Rezept ist für 2 Personen.</p>
+            <p>1 Portion = ca. 167 kcal.</p>
+            <img src="../img/paradiesschoko.jpg" alt="ParadiescremeSchoko" width="513" height="342">
             <h2>Trage die Kalorienangaben pro 100g (oder ml) ein oder wie viel Stück du genommen hast</h2>
         </div>
 
         <div>
             <fieldset class="feld">
-                <legend><h3>Teig</h3></legend>
+                <legend><h3>Paradies Creme</h3></legend>
                 <div>
                     <label>
-                        100g Dinkelvollkornmehl:
-                        <input type="text" data-lebensmittel="mehl" placeholder="334kcal/100g"/>
-                        <span class="kcalOutput" data-output="mehl">0</span> kcal
+                        1 Pck. Paradies Creme:
+                        <input type="text" data-lebensmittel="creme" placeholder="1 Packung"/>
+                        <span class="kcalOutput" data-output="creme">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        180ml Milch:
-                        <input type="text" data-lebensmittel="milch" placeholder="36kcal/100g"/>
+                        300ml Milch:
+                        <input type="text" data-lebensmittel="milch" placeholder="64kcal/100ml"/>
                         <span class="kcalOutput" data-output="milch">0</span> kcal
                     </label>
                 </div>
+                <p style="font-size: 14pt; font-weight: bold;">Beilage</p>
                 <div>
                     <label>
-                        3 Eier:
-                        <input type="text" data-lebensmittel="eier" placeholder="3 Stück"/>
-                        <span class="kcalOutput" data-output="eier">0</span> kcal
+                        500g Erdbeeren:
+                        <input type="text" data-lebensmittel="erdbeeren" placeholder="500g"/>
+                        <span class="kcalOutput" data-output="erdbeeren">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        1 Prise (0,4g) Salz:
-                        <input type="text" data-lebensmittel="salz" placeholder="1 Prise"/>
-                        <span class="kcalOutput" data-output="salz">0</span> kcal
+                        Zucker (bei Bedarf):
+                        <input type="text" data-lebensmittel="zucker" placeholder="20g"/>
+                        <span class="kcalOutput" data-output="zucker">0</span> kcal
                     </label>
-                </div>
-                <p style="font-size: 14pt; font-weight: bold;">Belag insg. (4 Wraps)</p>
-                <div>
-                    <p style="font-size: 10pt;">(Grammzahl pro 1 Wrap hochrechnen auf Anzahl Wraps (z.B. 4 Stück))</p>
-                    <label>
-                        Frischkäse (243kcal/100g):
-                        <input type="text" data-lebensmittel="käse" placeholder="15g pro Wrap"/>
-                        <span class="kcalOutput" data-output="käse">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Lachs (180kcal/100g):
-                        <input type="text" data-lebensmittel="lachs" placeholder="50g pro Wrap"/>
-                        <span class="kcalOutput" data-output="lachs">0</span> kcal
-                    </label>
-                </div>
+                </div> 
                 <div class="gesamt">
                     Gesamtkalorien: <span class="gesamtKcal">0</span> kcal
                 </div>
@@ -350,27 +334,27 @@
         </div>
 
         <p>_______________________________________________________________</p>
-
+    
         <div>
             <fieldset class="feld">
-                <legend><h3>Stück</h3></legend>
+                <legend><h3>Portion</h3></legend>
                 <div>
                     <label>
                         Kalorien insg.:
-                        <input type="text" data-lebensmittel="gesKalorien" placeholder="1162.60kcal/Teig"/>
+                        <input type="text" data-lebensmittel="gesKalorien" placeholder="666.00kcal/Teig"/>
                     </label>
                 </div>
                 <div>
                     <label>
-                        Stück insg.:
-                        <input type="text" data-lebensmittel="gesStück" placeholder="4 Stück"/>
+                        Portion insg.:
+                        <input type="text" data-lebensmittel="gesStück" placeholder="4 Portionen"/>
                     </label>
                 </div>
                 <div class="gesamt">
-                    Kalorien pro Wrap: <span class="kcalStück">0</span> kcal
+                    Kalorien pro Portion: <span class="kcalStück">0</span> kcal
                 </div>
                 <p></p>
-                <button class="berechnenButton">Wrap berechnen</button>
+                <button class="berechnenButton">Portion berechnen</button>
                 <button class="resetButton">Refresh</button>
             </fieldset>
         </div>
@@ -379,12 +363,10 @@
     <script>
         //Lebensmittel-Datenbank (Mengenangaben pro Lebensmittel)
         const lebensmittel = {
-            mehl: 100,
-            milch: 180,
-            eier: 8600,
-            salz: 0,
-            käse: 243,
-            lachs: 180
+            creme: 30900,
+            milch: 300,
+            erdbeeren: 33,
+            zucker: 400
         };
 
         //Funktion zur Berechnung Bereich: Teig

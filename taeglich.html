@@ -126,17 +126,17 @@
                 <br>
                 <div class="tooltip">
                     <a href="rezepte/apfelgrütze.html">Apfelgrütze mit Vanillesoße</a>
-                    <span class="tooltiptext"></span>
+                    <span class="tooltiptext">1 Portion = ca. 278 kcal</span>
                 </div>
                 <br>
                 <div class="tooltip">
                     <a href="rezepte/paradiesSchoko.html">Pradies Creme Schoko</a>
-                    <span class="tooltiptext"></span>
+                    <span class="tooltiptext">1 Portion = ca. 167 kcal</span>
                 </div>
                 <br>
                 <div class="tooltip">
                     <a href="rezepte/erdbeerenVanille.html">Erdbeeren und Vanillepudding</a>
-                    <span class="tooltiptext"></span>
+                    <span class="tooltiptext">1 Portion = ca. 190 kcal</span>
                 </div>
             </li>
         </ul>
@@ -287,7 +287,7 @@
     <div class="context">
         <div class="title">
             <h1>Tagesbedarf berechnen</h1>
-            <img src="img/täglich.jpg" alt="Täglich" width="513" height="342">
+            <img src="img/täglich.jpg" alt="Waage" width="513" height="342">
             <h2>Trage die Kalorienangaben pro 100g (oder ml) ein oder wie viel Stück du genommen hast</h2>
         </div>
 
@@ -503,12 +503,13 @@
                         <span class="kcalOutput" data-output="extra">0</span> kcal
                     </label>
                 </div>
-                <p>_______________________________________________________________</p>
+                
                 <div class="gesamt">
                     Gesamtkalorien: <span class="gesamtKcal">0</span> kcal
                 </div>
                 <div class="ges">
                     Du musst mindestens <span class="kcalDefizit">0</span> kcal verbrennen um im Defizit zu bleiben.
+                    <p>Bei durchschnittlicher Arbeitswoche verbrauchst du ca. 1847 kcal täglich.</p>
                 </div>
                 <p></p>
                 <button class="berechnenButton">Kalorien berechnen</button>
@@ -588,7 +589,7 @@
             inputs.forEach(input => input.value = '');
 
             //Für berechnete Werte (outputs)
-            const outputs = container.querySelectorAll('.kcalOutput, .kcalStück');
+            const outputs = container.querySelectorAll('.kcalOutput, .kcalStück, .kcalDefizit');
             outputs.forEach(output => output.textContent = '0');
 
             //Gesamtkalorien im Container zurücksetzen

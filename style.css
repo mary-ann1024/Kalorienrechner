@@ -213,6 +213,11 @@ div.gallery {
     margin-top: 10px;
   }
 
+  .ges p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 7pt;
+  }
+
 .feld div {
     padding-top: 3px;
 }
