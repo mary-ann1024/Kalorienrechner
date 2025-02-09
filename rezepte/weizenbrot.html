@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rezepte berechnen</title>
+</head>
+<body>
+    <h1>Weizenbrot</h1>
+    <p>
+        <a href="../home.html">Home</a>
+        <a href="../rezepteLi.html">Rezepte</a>
+    </p>
+    <div>
+        <p>Trage die Kalorienangaben pro 100g (oder ml) ein oder wie viel Stück du genommen hast:</p>
+    </div>
+
+    <div>
+        <fieldset>
+            <legend><h3>Teig</h3></legend>
+            <div>
+                <label>
+                    500g Weizenmehl (Typ 405):
+                    <input type="text" data-lebensmittel="mehl" placeholder="347kcal/100g"/>
+                    <span class="kcalOutput" data-output="mehl">0</span> kcal
+                </label>
+            </div>
+            <div>
+                <label>
+                    280ml Wasser (lauwarm):
+                    <input type="text" data-lebensmittel="wasser" placeholder="280g"/>
+                    <span class="kcalOutput" data-output="wasser">0</span> kcal
+                </label>
+            </div>
+            <div>
+                <label>
+                    12g Salz:
+                    <input type="text" data-lebensmittel="salz" placeholder="12g"/>
+                    <span class="kcalOutput" data-output="salz">0</span> kcal
+                </label>
+            </div>
+            <div>
+                <label>
+                    5g Hefe:
+                    <input type="text" data-lebensmittel="hefe" placeholder="5g"/>
+                    <span class="kcalOutput" data-output="hefe">0</span> kcal
+                </label>
+            </div>
+            <div>
+                <label>
+                    1 EL (15ml) Olivenöl:
+                    <input type="text" data-lebensmittel="öl" placeholder="1 EL"/>
+                    <span class="kcalOutput" data-output="öl">0</span> kcal
+                </label>
+            </div>
+            <div>
+                Gesamtkalorien: <span class="gesamtKcal">0</span> kcal
+            </div>
+            <p></p>
+            <button class="berechnenButton">Berechnen</button>
+            <button class="resetButton">Refresh</button>
+        </fieldset>
+    </div>
+
+    <div>
+        <fieldset>
+            <legend><h3>Scheiben</h3></legend>
+            <div>
+                <label>
+                    Kalorien insg.:
+                    <input type="text" data-lebensmittel="gesKalorien" placeholder="1864.75kcal/Brot"/>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Gramm insg.:
+                    <input type="text" data-lebensmittel="gesGramm" placeholder="1500g/Brot"/>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Scheiben insg.:
+                    <input type="text" data-lebensmittel="gesScheiben" placeholder="24/Brot"/>
+                </label>
+            </div>
+            <div>
+                Kalorien pro Scheibe: <span class="kcalScheibe">0</span> kcal
+            </div>
+            <div>
+                Kalorien pro 100g: <span class="kcal100g">0</span> kcal
+            </div>
+            <p></p>
+            <button class="berechnenButton">Berechnen</button>
+            <button class="resetButton">Refresh</button>
+        </fieldset>
+    </div>
+
+    <script>
+        //Lebensmittel-Datenbank (Mengenangaben pro 100g)
+        const lebensmittel = {
+            mehl: 500,
+            wasser: 0,
+            salz: 0,
+            hefe: 111,
+            öl: 12420
+        };
+
+        //Funktion zur Berechnung Bereich: Teig
+        function berechneKalorien(container) {
+            //Variable für Gesamtkalorien (startet bei 0)
+            let gesamtKcal = 0;
+
+            //Alle Eingabefelder (inputs) durchlaufen
+            const inputs = container.querySelectorAll('[data-lebensmittel]');
+            inputs.forEach(input => {
+                const name = input.dataset.lebensmittel; // Lebensmittelname
+                const kcal = parseFloat(input.value) || 0; // Nutzereingabe: Kalorien pro 100g Lebensmittel
+                const gramm = lebensmittel[name]; // Gramm pro Lebensmittel
+                const kcalPortion = (kcal / 100) * gramm; // Kalorien für die angegebene Menge
+
+                //Gesamtkalorien berechnen
+                gesamtKcal += kcalPortion;
+
+                //Berechnete Werte anzeigen
+                container.querySelector(`[data-output="${name}"]`).textContent = kcalPortion.toFixed(2);
+            });
+
+            //Gesamtkalorien im aktuellen Container ausgeben
+            const gesamtKcalElement = container.querySelector('.gesamtKcal');
+            if (gesamtKcalElement) {
+                gesamtKcalElement.textContent = gesamtKcal.toFixed(2);
+            }
+        }
+
+        //Funktion zum Zurücksetzen Bereich: Teig
+        function resetForm(container) {
+
+            //Für Eingabefelder (inputs)
+            const inputs = container.querySelectorAll('[data-lebensmittel]');
+            inputs.forEach(input => input.value = '');
+
+            //Für berechnete Werte (outputs)
+            const outputs = container.querySelectorAll('.kcalOutput, .kcalScheibe, .kcal100g');
+            outputs.forEach(output => output.textContent = '0');
+
+            //Gesamtkalorien im Container zurücksetzen
+            const gesamtKcalElement = container.querySelector('.gesamtKcal');
+            if (gesamtKcalElement) {
+                gesamtKcalElement.textContent = '0';
+            }
+        }
+
+        //Funktion zur Berechnung Bereich: Scheiben
+        function berechneScheiben(container) {
+            //Eingabefelder auslesen
+            const kalorien = parseFloat(container.querySelector('[data-lebensmittel="gesKalorien"]').value) || 0;
+            const gewicht = parseFloat(container.querySelector('[data-lebensmittel="gesGramm"]').value) || 0;
+            const scheiben = parseFloat(container.querySelector('[data-lebensmittel="gesScheiben"]').value) || 0;
+
+            //Berechnung
+            const kcalProScheibe = kalorien / scheiben || 0;
+            const kcalPro100g = (kalorien / gewicht) * 100 || 0;
+
+            //Berechnete Werte anzeigen
+            container.querySelector('.kcalScheibe').textContent = kcalProScheibe.toFixed(2);
+            container.querySelector('.kcal100g').textContent = kcalPro100g.toFixed(2);
+        }
+
+        //Event-Deglaration: Event-Listener für Klick innerhalb <body>
+        document.body.addEventListener('click', (event) => {
+
+            //Event für Berechnen-Button
+            if (event.target.matches('.berechnenButton')) {
+                const container = event.target.closest('fieldset');
+                
+                //Berechnen-Button Bereich: Scheiben
+                if (container.querySelector('[data-lebensmittel="gesKalorien"]')) {
+                    berechneScheiben(container);
+
+                //Berechnen-Button Bereich: Teig
+                } else {
+                    berechneKalorien(container);
+                }
+            }
+        
+            //Event für Reset-Button
+            if (event.target.matches('.resetButton')) {
+                const container = event.target.closest('fieldset');
+                resetForm(container); //Funktion Zurücksetzen Bereich: Teig
+            }
+        });
+
+    </script>
+</body>

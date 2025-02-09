@@ -1,0 +1,276 @@
+/* body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Source Sans Pro Topnav', sans-serif;
+    font-family: Georgia,serif;
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+.navigation ul {
+    font-family: Garamond, serif;
+    font-weight: bold;
+    font-size: 16pt;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position:fixed;
+    width: 100%;
+    z-index: 1;
+}
+  
+.navigation li {
+    float: left; /*an linkem Rand orientiert*/
+}
+  
+.navigation li a {
+    display: block; /*um padding setzen zu können*/
+    color: white;
+    text-align: center;
+    padding: 14px 16px; /*Freiraum zum Text*/
+    text-decoration: none;
+}
+  
+.navigation li a:hover {
+    text-decoration: underline;
+    background-color: #111;
+}
+
+.navigation .active {
+    text-decoration: underline;
+    background-color: #111;
+}
+
+.rezepte {
+    max-width: 30%;
+    float: left;
+    margin-top:50px;
+}
+
+.rezepte ul {
+    font-family: Garamond, serif;
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: #333;
+    color:white;
+    padding: 10px;
+    margin: 0px;
+}
+
+.rezepte ul li {
+    font-family: Garamond, serif;
+    font-size: 12pt;
+    font-weight: normal;
+    list-style-type: none;
+    background-color: #333;
+    color:white;
+    margin: 5px;
+    padding: 5px;
+}
+
+.rezepte li a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+    text-decoration : none;
+    background-color: #333;
+    color : white;
+    font-weight: normal;
+    margin: 10px;
+}
+
+.rezepte li a:hover {
+    text-decoration: underline;
+}
+
+.rezepte .tooltip {
+    position: relative; /*Text positionieren*/
+    display: inline-block;
+}
+
+.tooltip .click {
+    text-decoration: underline;
+}
+  
+.rezepte .tooltip .tooltiptext {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8pt;
+    visibility: hidden; /*nicht sichtbar*/
+    width: 200px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 5px; /*abgerundete Ecken*/
+    padding: 5px 0;
+    
+    /*Positionierung*/
+    position: absolute;
+    z-index: 2; /*Reihenfolge der Elemente (Tooltip unter Text)*/
+    top: -5px; /*mittig von Container (siehe padding oben)*/
+    left: 105%; /*rechts vom Link*/
+
+    /*Tooltip einblenden (in 1s von 0% zu 100% Deckkraft)*/
+    /*opacity: 0; Deckkraft 0%
+    transition: opacity 1s;*/
+}
+
+/*wenn Maus drüber gehalten wird*/
+.rezepte .tooltip:hover .tooltiptext {
+    visibility: visible; /*sichtbar*/
+    opacity: 0.8; /*Deckkraft 100%*/
+}
+
+.context {
+    max-width: 70%;
+    float: left;
+    padding: 10px;
+    margin-top:50px;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 190px;
+    height: 235px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  div.text {
+    font-family: Garamond, serif;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+  }
+
+  div.text p {
+    font-size: 10pt;
+    font-weight: normal;
+    color: #777;
+  }
+
+  div.text a {
+    text-decoration: none;
+    color: black;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+/* Create three equal columns that floats next to each other */
+.gallery {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+  }
+
+  .row p {
+    font-family: Garamond, serif;
+    font-weight: bold;
+    font-size: 14pt;
+    margin: 0%;
+    padding-top: 12px;
+  }
+  
+  /* Clear floats after the columns */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width:600px) {
+    .gallery {
+      width: 100%;
+    }
+  }
+
+  label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+  }
+
+  .gesamt {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .ges {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+    margin-top: 10px;
+  }
+
+.feld div {
+    padding-top: 3px;
+}
+
+  .feld {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: none;
+  }
+
+  .berechnenButton {
+    background-color: #777;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .resetButton {
+    background-color: #999;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+.title {
+    font-family: Garamond, serif;
+}
+.title p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8pt;
+}
+
+.title h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 9pt;
+    float: right;
+}
+
+.context img {
+    float: right;
+    display: inline;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
