@@ -279,3 +279,24 @@ div.gallery {
     height: auto;
     margin-bottom: 20px;
 }
+
+.desc {
+  margin: 20px;
+}
+
+.desc p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 9pt;
+}
+
+.desc a {
+  font-weight: bold;
+  font-size: 10pt;
+  color: black;
+  text-decoration: none;
+}
+
+.context p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 20px;
+}
