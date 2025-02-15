@@ -16,7 +16,13 @@
     </div>
     <div class="rezepte">
         <ul>Neues Rezept
-            <li><a href="idee.html">Rezept zusammenstellen</a></li>
+            <li>
+                <div class="tooltip">
+                    <a href="idee.html">Rezept zusammenstellen (kochen)</a>
+                    <br>
+                    <a href="ideeBacken.html">Rezept zusammenstellen (backen)</a>
+                </div>
+            </li>
         </ul>
 
         <ul>Kochen            
@@ -164,52 +170,14 @@
                     <a href="rezepte/dinkelvollkorn.html">Dinkel-Vollkornbrot</a>
                     <span class="tooltiptext">1 Scheibe = ca. 111 kcal</span>
                 </div>
-                <br>
-                <div class="tooltip">
-                    <a href="rezepte/vollkorntoast.html">Vollkorntoast</a>
-                    <span class="tooltiptext"></span>
-                </div>
-                <br>
-                <div class="tooltip">
-                    <a href="rezepte/weizenbrot.html">Weizenbrot</a>
-                    <span class="tooltiptext"></span>
-                </div>
-                <br>
-                <div class="tooltip">
-                    <a href="rezepte/landbrot.html">Schwarzwälder Landbrot</a>
-                    <span class="tooltiptext"></span>
-                </div>
-                <br>
-                <div class="tooltip">
-                    <a href="rezepte/feinbrot.html">Feinbrot</a>
-                    <span class="tooltiptext"></span>
-                </div>
             </li>
 
-            <li>Brötchen
+            <li>Waffeln & Muffins
                 <br>
                 <div class="tooltip">
-                    <a href="rezepte/weizenbrötchen.html">Weizenbrötchen</a>
-                    <span class="tooltiptext"></span>
+                    <a href="rezepte/waffeln.html">Selbstgemachte Waffeln</a>
+                    <span class="tooltiptext">1 Waffel = ca. 261 kcal</span>
                 </div>
-                <br>
-                <div class="tooltip">
-                    <a href="rezepte/dinkelbrötchen.html">Dinkelbrötchen</a>
-                    <span class="tooltiptext"></span>
-                </div>
-                <br>
-                <div class="tooltip">
-                    <a href="rezepte/rustikale.html">Rustikale Frühstücksbrötchen</a>
-                    <span class="tooltiptext"></span>
-                </div>
-                <br>
-                <div class="tooltip">
-                    <a href="rezepte/hörnchen.html">Schokohörnchen</a>
-                    <span class="tooltiptext"></span>
-                </div>
-            </li>
-
-            <li>Muffins
                 <br>
                 <div class="tooltip">
                     <a href="rezepte/zitronenmuffin.html">Zitronenmuffins</a>
@@ -352,7 +320,28 @@
                         <span class="kcalOutput" data-output="nutella">0</span> kcal
                     </label>
                 </div>
+                <div>
+                    <label>
+                        Croissant:
+                        <input type="text" data-lebensmittel="croissant" placeholder="1 Stück"/>
+                        <span class="kcalOutput" data-output="croissant">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Croissant mit Nutella (10g):
+                        <input type="text" data-lebensmittel="croissantNut" placeholder="1 Stück"/>
+                        <span class="kcalOutput" data-output="croissantNut">0</span> kcal
+                    </label>
+                </div>
                 <p style="font-size: 14pt; font-weight: bold;">Kakao</p>
+                <div>
+                    <label>
+                        Vollmilch (großer Becher = 350ml):
+                        <input type="text" data-lebensmittel="vollmilch" placeholder="350ml"/>
+                        <span class="kcalOutput" data-output="vollmilch">0</span> kcal
+                    </label>
+                </div>
                 <div>
                     <label>
                         Hafermilch (großer Becher = 350ml):
@@ -433,14 +422,6 @@
                         <span class="kcalOutput" data-output="käsah">0</span> kcal
                     </label>
                 </div>
-                <p style="font-size: 14pt; font-weight: bold;">Obst & Gemüse</p>
-                <div>
-                    <label>
-                        Banane:
-                        <input type="text" data-lebensmittel="banane" placeholder="110g"/>
-                        <span class="kcalOutput" data-output="banane">0</span> kcal
-                    </label>
-                </div>
                 <p style="font-size: 14pt; font-weight: bold;">Süßkram</p>
                 <div>
                     <label>
@@ -507,6 +488,7 @@
                 </div>
                 <p style="font-size: 14pt; font-weight: bold;">Extra</p>
                 <div>
+                    <p style="font-size: 7pt;">Trage hier zum Beispiel berechnete Kalorien von einem gespeicherten Rezept ein:</p>
                     <label>
                         Kalorien für Extra 1:
                         <input type="text" data-lebensmittel="extra1" placeholder="132 kcal"/>
@@ -553,6 +535,9 @@
             baguetteBrötchen: 15500,
             butter: 743,
             nutella: 539,
+            croissant: 14300,
+            croissantNut: 19700,
+            vollmilch: 64,
             hafermilch: 36,
             kakaopulver: 380,
             tomo: 22600,
@@ -563,7 +548,6 @@
             schokomüsli: 400,
             zartherb: 9300,
             apfel: 52,
-            banane: 89,
             duplo: 10000,
             bueno: 12298,
             lachgummi: 333,
@@ -665,3 +649,4 @@
 
     </script>
 </body>
+</html>

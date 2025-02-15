@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="icon" href="../img/icon.png" type="image/png">
-    <title>Oreo-Cupcakes - Kalorienrechner</title>
+    <title>Selbstgemachte Waffeln - Kalorienrechner</title>
 </head>
 <body>
     <div class="navigation">
@@ -174,7 +174,7 @@
             <li>Waffeln & Muffins
                 <br>
                 <div class="tooltip">
-                    <a href="waffeln.html">Selbstgemachte Waffeln</a>
+                    <a class="click" href="waffeln.html">Selbstgemachte Waffeln</a>
                     <span class="tooltiptext">1 Waffel = ca. 261 kcal</span>
                 </div>
                 <br>
@@ -189,7 +189,7 @@
                 </div>
                 <br>
                 <div class="tooltip">
-                    <a class="click" href="oreomuffins.html">Oreo-Cupcakes</a>
+                    <a href="oreomuffins.html">Oreo-Cupcakes</a>
                     <span class="tooltiptext">1 Cupcake = ca. 470 kcal</span>
                 </div>
             </li>
@@ -254,10 +254,11 @@
 
     <div class="context">
         <div class="title">
-            <h1>Oreo-Cupcakes</h1>
-            <p>Das Rezept ist für 12 Cupcakes.</p>
-            <p>1 Cupcake = ca. 470 kcal.</p>
-            <img src="../img/oreomuffins.jpg" alt="Oreomuffins" width="513" height="342">
+            <h1>Selbstgemachte Waffeln</h1>
+            <p>Das Rezept ist für 10 Waffeln.</p>
+            <p>1 Waffel = ca. 261 kcal.</p>
+            <p>1 Waffel (mit Topping) = ca. 624 kcal.</p>
+            <img src="../img/waffeln.jpg" alt="Waffeln" width="513" height="342">
             <h2>Trage die Kalorienangaben pro 100g (oder ml) ein oder wie viel Stück du genommen hast</h2>
         </div>
 
@@ -267,13 +268,13 @@
                 <div>
                     <label>
                         125g weiche Butter:
-                        <input type="text" data-lebensmittel="butter1" placeholder="743kcal/100g"/>
-                        <span class="kcalOutput" data-output="butter1">0</span> kcal
+                        <input type="text" data-lebensmittel="butter" placeholder="743kcal/100g"/>
+                        <span class="kcalOutput" data-output="butter">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        150g Zucker:
+                        100g Zucker:
                         <input type="text" data-lebensmittel="zucker" placeholder="400kcal/100g"/>
                         <span class="kcalOutput" data-output="zucker">0</span> kcal
                     </label>
@@ -287,15 +288,15 @@
                 </div>
                 <div>
                     <label>
-                        2 Eier:
-                        <input type="text" data-lebensmittel="eier" placeholder="2 Stück"/>
+                        3 Eier:
+                        <input type="text" data-lebensmittel="eier" placeholder="3 Stück"/>
                         <span class="kcalOutput" data-output="eier">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        180g Mehl:
-                        <input type="text" data-lebensmittel="mehl" placeholder="341kcal/100g"/>
+                        250g Mehl:
+                        <input type="text" data-lebensmittel="mehl" placeholder="343kcal/100g"/>
                         <span class="kcalOutput" data-output="mehl">0</span> kcal
                     </label>
                 </div>
@@ -308,13 +309,6 @@
                 </div>
                 <div>
                     <label>
-                        2 EL (30g) Kakaopulver:
-                        <input type="text" data-lebensmittel="kakao" placeholder="2 EL"/>
-                        <span class="kcalOutput" data-output="kakao">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
                         2 TL (10g) Backpulver:
                         <input type="text" data-lebensmittel="backpulver" placeholder="2 TL"/>
                         <span class="kcalOutput" data-output="backpulver">0</span> kcal
@@ -322,62 +316,41 @@
                 </div>
                 <div>
                     <label>
-                        75ml Milch:
-                        <input type="text" data-lebensmittel="milch" placeholder="64kcal/100g"/>
+                        200ml Milch:
+                        <input type="text" data-lebensmittel="milch" placeholder="64kcal/100ml"/>
                         <span class="kcalOutput" data-output="milch">0</span> kcal
                     </label>
                 </div>
+                <p style="font-size: 14pt; font-weight: bold;">Toppings</p>
                 <div>
                     <label>
-                        18 Stk. Oreo-Kekse:
-                        <input type="text" data-lebensmittel="oreo1" placeholder="18 Stück"/>
-                        <span class="kcalOutput" data-output="oreo1">0</span> kcal
-                    </label>
-                </div>
-                <p style="font-size: 14pt; font-weight: bold;">Frosting</p>
-                <div>
-                    <label>
-                        100g Sahne:
-                        <input type="text" data-lebensmittel="sahne" placeholder="292kcal/100ml"/>
-                        <span class="kcalOutput" data-output="sahne">0</span> kcal
+                        Erdbeeren:
+                        <input type="text" data-lebensmittel="erdbeeren" placeholder="75 g"/>
+                        <span class="kcalOutput" data-output="erdbeeren">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        50g weiche Butter:
-                        <input type="text" data-lebensmittel="butter2" placeholder="743kcal/100g"/>
-                        <span class="kcalOutput" data-output="butter2">0</span> kcal
+                        Nutella:
+                        <input type="text" data-lebensmittel="nutella" placeholder="30 g"/>
+                        <span class="kcalOutput" data-output="nutella">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        100g Frischkäse:
-                        <input type="text" data-lebensmittel="frischkäse" placeholder="252kcal/100g"/>
-                        <span class="kcalOutput" data-output="frischkäse">0</span> kcal
+                        Bueno:
+                        <input type="text" data-lebensmittel="bueno" placeholder="1 Stück"/>
+                        <span class="kcalOutput" data-output="bueno">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        75g Puderzucker:
-                        <input type="text" data-lebensmittel="puderzucker" placeholder="400kcal/100g"/>
-                        <span class="kcalOutput" data-output="puderzucker">0</span> kcal
+                        Schoko Dessertsauce:
+                        <input type="text" data-lebensmittel="schokoSo" placeholder="15 ml"/>
+                        <span class="kcalOutput" data-output="schokoSo">0</span> kcal
                     </label>
                 </div>
-                <div>
-                    <label>
-                        6 Stk. Oreo-Kekse:
-                        <input type="text" data-lebensmittel="oreo2" placeholder="6 Stück"/>
-                        <span class="kcalOutput" data-output="oreo2">0</span> kcal
-                    </label>
-                </div>
-                <p style="font-size: 14pt; font-weight: bold;">Deko</p>
-                <div>
-                    <label>
-                        12 Stk. Oreo-Kekse:
-                        <input type="text" data-lebensmittel="oreo3" placeholder="12 Stück"/>
-                        <span class="kcalOutput" data-output="oreo3">0</span> kcal
-                    </label>
-                </div>
+
                 <div class="gesamt">
                     Gesamtkalorien: <span class="gesamtKcal">0</span> kcal
                 </div>
@@ -386,22 +359,22 @@
                 <button class="resetButton">Refresh</button>
             </fieldset>
         </div>
-
-        <p>_______________________________________________________________</p>
     
+        <p>_______________________________________________________________</p>
+
         <div>
             <fieldset class="feld">
                 <legend><h3>Stück</h3></legend>
                 <div>
                     <label>
                         Kalorien insg.:
-                        <input type="text" data-lebensmittel="gesKalorien" placeholder="5640.05kcal/Teig"/>
+                        <input type="text" data-lebensmittel="gesKalorien" placeholder="2975.38kcal/Teig"/>
                     </label>
                 </div>
                 <div>
                     <label>
                         Stück insg.:
-                        <input type="text" data-lebensmittel="gesStück" placeholder="12 Stück"/>
+                        <input type="text" data-lebensmittel="gesStück" placeholder="10 Stück"/>
                     </label>
                 </div>
                 <div class="gesamt">
@@ -417,25 +390,21 @@
     <script>
         //Lebensmittel-Datenbank (Mengenangaben pro Lebensmittel)
         const lebensmittel = {
-            butter1: 125,
-            zucker: 150,
+            butter: 125,
+            zucker: 100,
             vanillezucker: 3200,
             eier: 8600,
-            mehl: 180,
+            mehl: 250,
             salz: 0,
-            kakao: 5700,
             backpulver: 400,
-            milch: 75,
-            oreo1: 5300,
-            sahne: 100,
-            butter2: 50,
-            frischkäse: 100,
-            puderzucker: 75,
-            oreo2: 5300,
-            oreo3: 5300
+            milch: 200,
+            erdbeeren: 33,
+            nutella: 539,
+            bueno: 12298,
+            schokoSo: 358
         };
 
-        //Funktion zur Berechnung Bereich: Teig
+        //Funktion zur Berechnung Bereich: Teig 
         function berechneKalorien(container) {
             //Variable für Gesamtkalorien (startet bei 0)
             let gesamtKcal = 0;

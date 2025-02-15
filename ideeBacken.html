@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="img/icon.png" type="image/png">
-    <title>Rezept zusammenstellen (kochen) - Kalorienrechner</title>
+    <title>Rezept zusammenstellen (backen) - Kalorienrechner</title>
 </head>
 <body>
     <div class="navigation">
@@ -18,9 +18,9 @@
         <ul>Neues Rezept
             <li>
                 <div class="tooltip">
-                    <a class="click" href="idee.html">Rezept zusammenstellen (kochen)</a>
+                    <a href="idee.html">Rezept zusammenstellen (kochen)</a>
                     <br>
-                    <a href="ideeBacken.html">Rezept zusammenstellen (backen)</a>
+                    <a class="click" href="ideeBacken.html">Rezept zusammenstellen (backen)</a>
                 </div>
             </li>
         </ul>
@@ -255,220 +255,128 @@
 
     <div class="context">
         <div class="title">
-            <h1>Rezept zusammenstellen (kochen)</h1>
-            <img src="img/idee.jpg" alt="Idee" width="513" height="342">
+            <h1>Rezept zusammenstellen (backen)</h1>
+            <img src="img/ideeBacken.jpg" alt="IdeeBacken" width="513" height="342">
             <h2>Trage die Kalorienangaben pro 100g (oder ml) ein oder wie viel Stück du genommen hast</h2>
         </div>
 
         <div>
             <fieldset class="feld">
-                <legend><h3>Gemüse</h3></legend>
+                <legend><h3>Mehle & andere</h3></legend>
                 <div>
                     <label>
-                        Brokkoli (34kcal/100g):
-                        <input type="text" data-lebensmittel="brokkoli" placeholder="ca. 376g/Stück" />
-                        <span class="kcalOutput" data-output="brokkoli">0</span> kcal
+                        Weizenmehl (347kcal/100g):
+                        <input type="text" data-lebensmittel="weizenmehl" placeholder="1000 g/Packung" />
+                        <span class="kcalOutput" data-output="weizenmehl">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Blumenkohl (25kcal/100g):
-                        <input type="text" data-lebensmittel="blumenkohl" placeholder="ca. 254g/Stück" />
-                        <span class="kcalOutput" data-output="blumenkohl">0</span> kcal
+                        Dinkelmehl (344kcal/100g):
+                        <input type="text" data-lebensmittel="dinkelmehl" placeholder="1000 g/Packung" />
+                        <span class="kcalOutput" data-output="dinkelmehl">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Karotten (41kcal/100g):
-                        <input type="text" data-lebensmittel="karotte" placeholder="ca. 50g/Stück" />
-                        <span class="kcalOutput" data-output="karotte">0</span> kcal
+                        Dinkelvollkornmehl (334kcal/100g):
+                        <input type="text" data-lebensmittel="dinkelvollkorn" placeholder="1000 g/Packung" />
+                        <span class="kcalOutput" data-output="dinkelvollkorn">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Knoblauch (142kcal/100g):
-                        <input type="text" data-lebensmittel="knoblauch" placeholder="ca. 4,5g/Zehe" />
-                        <span class="kcalOutput" data-output="knoblauch">0</span> kcal
+                        Roggenmehl (334kcal/100g):
+                        <input type="text" data-lebensmittel="roggenmehl" placeholder="1000 g/Packung" />
+                        <span class="kcalOutput" data-output="roggenmehl">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Lauch/Porree (29kcal/100g):
-                        <input type="text" data-lebensmittel="lauch" placeholder="ca. 4,5g/Zehe" />
-                        <span class="kcalOutput" data-output="lauch">0</span> kcal
+                        Backmalz (371kcal/100g):
+                        <input type="text" data-lebensmittel="backmalz" placeholder="ca. 8g/TL" />
+                        <span class="kcalOutput" data-output="backmalz">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Zwiebel (28kcal/100g):
-                        <input type="text" data-lebensmittel="zwiebel" placeholder="ca. 85g/Stück" />
-                        <span class="kcalOutput" data-output="zwiebel">0</span> kcal
+                        Hefe (111kcal/100g):
+                        <input type="text" data-lebensmittel="hefe" placeholder="ca. 42g/Würfel" />
+                        <span class="kcalOutput" data-output="hefe">0</span> kcal
+                    </label>
+                </div>
+                <p style="font-size: 14pt; font-weight: bold;">Zucker & andere</p>
+                <div>
+                    <label>
+                        Zucker (400kcal/100g):
+                        <input type="text" data-lebensmittel="zucker" placeholder="1000 g/Packung" />
+                        <span class="kcalOutput" data-output="zucker">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Röstzwiebel (590kcal/100g):
-                        <input type="text" data-lebensmittel="röZwiebel" placeholder="ca. 85g/Stück" />
-                        <span class="kcalOutput" data-output="röZwiebel">0</span> kcal
+                        brauner Zucker (400kcal/100g):
+                        <input type="text" data-lebensmittel="brZucker" placeholder="500 g/Packung" />
+                        <span class="kcalOutput" data-output="brZucker">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Tomaten (19kcal/100g):
-                        <input type="text" data-lebensmittel="tomate" placeholder="ca. 200g/Stück" />
-                        <span class="kcalOutput" data-output="tomate">0</span> kcal
+                        Vanillezucker (394kcal/100g):
+                        <input type="text" data-lebensmittel="vanillezucker" placeholder="32 kcal/Tüte" />
+                        <span class="kcalOutput" data-output="vanillezucker">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Tomaten, passiert (27kcal/100g):
-                        <input type="text" data-lebensmittel="passTomaten" placeholder="500 g/Packung" />
-                        <span class="kcalOutput" data-output="passTomaten">0</span> kcal
+                        Puderzucker (400kcal/100g):
+                        <input type="text" data-lebensmittel="puderzucker" placeholder="250 g/Packung" />
+                        <span class="kcalOutput" data-output="puderzucker">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Tomaten, geschält o. gehackt (22kcal/100g):
-                        <input type="text" data-lebensmittel="tomateDose" placeholder="ca. 200g/Stück" />
-                        <span class="kcalOutput" data-output="tomateDose">0</span> kcal
+                        Backpulver (86kcal/100g):
+                        <input type="text" data-lebensmittel="backpulver" placeholder="ca. 5g/TL" />
+                        <span class="kcalOutput" data-output="backpulver">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Tomatenmark (116kcal/100g):
-                        <input type="text" data-lebensmittel="tomatenmark" placeholder="200 g/Tube" />
-                        <span class="kcalOutput" data-output="tomatenmark">0</span> kcal
+                        Vanillepuddingpulver (133kcal/Tüte):
+                        <input type="text" data-lebensmittel="pudding" placeholder="1 Tüte" />
+                        <span class="kcalOutput" data-output="pudding">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Paprika (40kcal/100g):
-                        <input type="text" data-lebensmittel="paprika" placeholder="ca. 200g/Stück" />
-                        <span class="kcalOutput" data-output="paprika">0</span> kcal
+                        Kakaopulver (380kcal/100g):
+                        <input type="text" data-lebensmittel="kakao" placeholder="ca. 15g/EL" />
+                        <span class="kcalOutput" data-output="kakao">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Hokkaidokürbis (63kcal/100g):
-                        <input type="text" data-lebensmittel="kürbis" placeholder="ca. 200g/Stück" />
-                        <span class="kcalOutput" data-output="kürbis">0</span> kcal
+                        Salz (0ckal/100g):
+                        <input type="text" data-lebensmittel="salz" placeholder="ca. 0.4g/Prise" />
+                        <span class="kcalOutput" data-output="salz">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Spargel (20kcal/100g):
-                        <input type="text" data-lebensmittel="spargel" placeholder="ca. 58g/Stange" />
-                        <span class="kcalOutput" data-output="spargel">0</span> kcal
-                    </label>
-                </div>
-                <p style="font-size: 14pt; font-weight: bold;">Fleisch</p>
-                <div>
-                    <label>
-                        Hähnchenfleisch (102kcal/100g):
-                        <input type="text" data-lebensmittel="hähnchenfleisch" placeholder="ca. 200g/Person" />
-                        <span class="kcalOutput" data-output="hähnchenfleisch">0</span> kcal
+                        Zimt (272kcal/100g):
+                        <input type="text" data-lebensmittel="zimt" placeholder="ca. 5g/TL" />
+                        <span class="kcalOutput" data-output="zimt">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Hähnchenbrust (110kcal/100g):
-                        <input type="text" data-lebensmittel="hähnchenbrust" placeholder="ca. 200g/Person" />
-                        <span class="kcalOutput" data-output="hähnchenbrust">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Schweinefilet (143kcal/100g):
-                        <input type="text" data-lebensmittel="schweinefleisch" placeholder="ca. 200g/Person" />
-                        <span class="kcalOutput" data-output="schweinefleisch">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Rinderhackfleisch (332kcal/100g):
-                        <input type="text" data-lebensmittel="rinderhackfleisch" placeholder="ca. 250g/Person" />
-                        <span class="kcalOutput" data-output="rinderhackfleisch">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Lachsfilet (215kcal/100g):
-                        <input type="text" data-lebensmittel="lachsfilet" placeholder="ca. 140g/Stück" />
-                        <span class="kcalOutput" data-output="lachsfilet">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Speckwürfel (246kcal/100g):
-                        <input type="text" data-lebensmittel="speckwürfel" placeholder="ca. 140g/Stück" />
-                        <span class="kcalOutput" data-output="speckwürfel">0</span> kcal
-                    </label>
-                </div>
-                <p style="font-size: 14pt; font-weight: bold;">Beilagen</p>
-                <div>
-                    <label>
-                        Nudeln (356kcal/100g):
-                        <input type="text" data-lebensmittel="nudeln" placeholder="ca. 110g/Person" />
-                        <span class="kcalOutput" data-output="nudeln">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Spaghetti (356kcal/100g):
-                        <input type="text" data-lebensmittel="spaghetti" placeholder="ca. 110g/Person" />
-                        <span class="kcalOutput" data-output="spaghetti">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Lasagne Platten (359kcal/100g):
-                        <input type="text" data-lebensmittel="lasagne" placeholder="ca. 110g/Person" />
-                        <span class="kcalOutput" data-output="lasagne">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Tortelloni (Spinat) (235kcal/100g):
-                        <input type="text" data-lebensmittel="tortelloniS" placeholder="ca. 160g/Person" />
-                        <span class="kcalOutput" data-output="tortelloniS">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Tortelloni (Rindfleisch) (231kcal/100g):
-                        <input type="text" data-lebensmittel="tortelloniR" placeholder="ca. 160g/Person" />
-                        <span class="kcalOutput" data-output="tortelloniR">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Jasmin-Reis (352kcal/100g):
-                        <input type="text" data-lebensmittel="jasminReis" placeholder="ca. 80g/Tasse" />
-                        <span class="kcalOutput" data-output="jasminReis">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Basmati-Reis (352kcal/100g):
-                        <input type="text" data-lebensmittel="basmatiReis" placeholder="ca. 80g/Tasse" />
-                        <span class="kcalOutput" data-output="basmatiReis">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Kartoffel (73kcal/100g):
-                        <input type="text" data-lebensmittel="kartoffel" placeholder="ca. 150g/Person" />
-                        <span class="kcalOutput" data-output="kartoffel">0</span> kcal
+                        Vanilleschote (274kcal/100g):
+                        <input type="text" data-lebensmittel="vanille" placeholder="ca. 2g Mark/Schote" />
+                        <span class="kcalOutput" data-output="vanille">0</span> kcal
                     </label>
                 </div>
                 <p style="font-size: 14pt; font-weight: bold;">Milchprodukte</p>
-                <div>
-                    <label>
-                        Butter (743kcal/100g):
-                        <input type="text" data-lebensmittel="butter" placeholder="1000 ml/Packung" />
-                        <span class="kcalOutput" data-output="butter">0</span> kcal
-                    </label>
-                </div>
                 <div>
                     <label>
                         Milch (64kcal/100ml):
@@ -485,242 +393,223 @@
                 </div>
                 <div>
                     <label>
-                        Cremefine 7% (89kcal/100ml):
-                        <input type="text" data-lebensmittel="cremefine7" placeholder="250 ml/Flasche" />
-                        <span class="kcalOutput" data-output="cremefine7">0</span> kcal
+                        Butter (743kcal/100g):
+                        <input type="text" data-lebensmittel="butter" placeholder="250 g/Block" />
+                        <span class="kcalOutput" data-output="butter">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Schmand (293kcal/100ml):
+                        Schmand (241kcal/100g):
                         <input type="text" data-lebensmittel="schmand" placeholder="200 g/Becher" />
                         <span class="kcalOutput" data-output="schmand">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Joghurt (64kcal/100g):
-                        <input type="text" data-lebensmittel="joghurt" placeholder="150 g/Becher" />
-                        <span class="kcalOutput" data-output="joghurt">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Quark (64kcal/100g):
-                        <input type="text" data-lebensmittel="quark" placeholder="150 g/Becher" />
+                        Magerquark (68kcal/100g):
+                        <input type="text" data-lebensmittel="quark" placeholder="500 g/Becher" />
                         <span class="kcalOutput" data-output="quark">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Frischkäse (243kcal/100ml):
+                        Frischkäse (243kcal/100g):
                         <input type="text" data-lebensmittel="frischkäse" placeholder="300 g/Packung" />
                         <span class="kcalOutput" data-output="frischkäse">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Schmelzkäse (Sahne) (276kcal/100ml):
-                        <input type="text" data-lebensmittel="schmelzSahne" placeholder="300 g/Packung" />
-                        <span class="kcalOutput" data-output="schmelzSahne">0</span> kcal
+                        Joghurt (63kcal/100g):
+                        <input type="text" data-lebensmittel="joghurt" placeholder="150 g/kl. Becher" />
+                        <span class="kcalOutput" data-output="joghurt">0</span> kcal
                     </label>
                 </div>
+                <p style="font-size: 14pt; font-weight: bold;">Öl & Eier</p>
                 <div>
                     <label>
-                        Schmelzkäse (Kräuter) (272kcal/100ml):
-                        <input type="text" data-lebensmittel="schmelzKräuter" placeholder="300 g/Packung" />
-                        <span class="kcalOutput" data-output="schmelzKräuter">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Parmesan (398kcal/100ml):
-                        <input type="text" data-lebensmittel="parmesan" placeholder="300 g/Packung" />
-                        <span class="kcalOutput" data-output="parmesan">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Mozzarella, gerieben (314kcal/100ml):
-                        <input type="text" data-lebensmittel="mozzarellaGer" placeholder="300 g/Packung" />
-                        <span class="kcalOutput" data-output="mozzarellaGer">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Gouda, gerieben (334kcal/100ml):
-                        <input type="text" data-lebensmittel="goudaGer" placeholder="300 g/Packung" />
-                        <span class="kcalOutput" data-output="goudaGer">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Emmentaler, gerieben (381kcal/100ml):
-                        <input type="text" data-lebensmittel="emmenGer" placeholder="300 g/Packung" />
-                        <span class="kcalOutput" data-output="emmenGer">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Cheddar, gerieben (402kcal/100ml):
-                        <input type="text" data-lebensmittel="cheddarGer" placeholder="300 g/Packung" />
-                        <span class="kcalOutput" data-output="cheddarGer">0</span> kcal
-                    </label>
-                </div>
-                <p style="font-size: 14pt; font-weight: bold;">für Soßen</p>
-                <div>
-                    <label>
-                        Gemüsebrühe (166kcal/100g):
-                        <input type="text" data-lebensmittel="gemüsebrühe" placeholder="8.3kcal/TL" />
-                        <span class="kcalOutput" data-output="gemüsebrühe">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Hühnerbrühe (207kcal/100g):
-                        <input type="text" data-lebensmittel="hühnerbrühe" placeholder="10.35kcal/TL" />
-                        <span class="kcalOutput" data-output="hühnerbrühe">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Rinderbrühe (200kcal/100g):
-                        <input type="text" data-lebensmittel="rinderbrühe" placeholder="10kcal/TL" />
-                        <span class="kcalOutput" data-output="rinderbrühe">0</span> kcal
+                        Margarine (720kcal/100g):
+                        <input type="text" data-lebensmittel="margarine" placeholder="500 g/Packung" />
+                        <span class="kcalOutput" data-output="margarine">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
                         Sonnenblumenöl (828kcal/100ml):
-                        <input type="text" data-lebensmittel="sonnenöl" placeholder="ca. 15ml/EL" />
+                        <input type="text" data-lebensmittel="sonnenöl" placeholder="1000 ml/Flasche" />
                         <span class="kcalOutput" data-output="sonnenöl">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
+                        Rapsöl (828kcal/100ml):
+                        <input type="text" data-lebensmittel="rapsöl" placeholder="1000 ml/Flasche" />
+                        <span class="kcalOutput" data-output="rapsöl">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
                         Olivenöl (828kcal/100ml):
-                        <input type="text" data-lebensmittel="olivenöl" placeholder="ca. 15ml/EL" />
+                        <input type="text" data-lebensmittel="olivenöl" placeholder="1000 ml/Flasche" />
                         <span class="kcalOutput" data-output="olivenöl">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
+                        Eier (86kcal/Stück):
+                        <input type="text" data-lebensmittel="eier" placeholder="1 Stück" />
+                        <span class="kcalOutput" data-output="eier">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Eiweiß (19kcal/Stück):
+                        <input type="text" data-lebensmittel="eiweiß" placeholder="1 Stück" />
+                        <span class="kcalOutput" data-output="eiweiß">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Eigelb (67kcal/Stück):
+                        <input type="text" data-lebensmittel="eigelb" placeholder="1 Stück" />
+                        <span class="kcalOutput" data-output="eigelb">0</span> kcal
+                    </label>
+                </div>
+                <p style="font-size: 14pt; font-weight: bold;">Nüsse</p>
+                <div>
+                    <label>
+                        Mandelblättchen (619kcal/100g):
+                        <input type="text" data-lebensmittel="mandelBl" placeholder="100 g/Tüte" />
+                        <span class="kcalOutput" data-output="mandelBl">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Mandeln, gemahlen (626kcal/100g):
+                        <input type="text" data-lebensmittel="mandeln" placeholder="200 g/Tüte"/>
+                        <span class="kcalOutput" data-output="mandeln">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Haselnüsse, gemahlen (678kcal/100g):
+                        <input type="text" data-lebensmittel="haselnüsse" placeholder="100 g/Tüte"/>
+                        <span class="kcalOutput" data-output="haselnüsse">0</span> kcal
+                    </label>
+                </div>
+                <p style="font-size: 14pt; font-weight: bold;">Dekoration</p>
+                <div>
+                    <label>
+                        Schoko Streusel (465kcal/100g):
+                        <input type="text" data-lebensmittel="schokoStr" placeholder="200 g/Packung"/>
+                        <span class="kcalOutput" data-output="schokoStr">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Bunte Streusel (402kcal/100g):
+                        <input type="text" data-lebensmittel="bunteStr" placeholder="200 g/Packung"/>
+                        <span class="kcalOutput" data-output="bunteStr">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Mohn (522kcal/100g):
+                        <input type="text" data-lebensmittel="mohn" placeholder="250 g/Tüte"/>
+                        <span class="kcalOutput" data-output="mohn">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Sesam (674kcal/100g):
+                        <input type="text" data-lebensmittel="sesam" placeholder="250 g/Tüte"/>
+                        <span class="kcalOutput" data-output="sesam">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Leinsamen (514kcal/100g):
+                        <input type="text" data-lebensmittel="leinsam" placeholder="200 g/Packung"/>
+                        <span class="kcalOutput" data-output="leinsam">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Dinkelflocken (353kcal/100g):
+                        <input type="text" data-lebensmittel="dinkelflocken" placeholder="500 g/Tüte"/>
+                        <span class="kcalOutput" data-output="dinkelflocken">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Butterkekse (435kcal/100g):
+                        <input type="text" data-lebensmittel="butterkeks" placeholder="40 Stk./Packung"/>
+                        <span class="kcalOutput" data-output="butterkeks">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Oreo-Kekse (472kcal/100g):
+                        <input type="text" data-lebensmittel="oreokeks" placeholder="176 g o. 16 Stk./Packung"/>
+                        <span class="kcalOutput" data-output="oreokeks">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Kuvertüre Zartbitter (533kcal/100g):
+                        <input type="text" data-lebensmittel="kuvertüreZart" placeholder="200 g/Block"/>
+                        <span class="kcalOutput" data-output="kuvertüreZart">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Kuvertüre Vollmilch (553kcal/100g):
+                        <input type="text" data-lebensmittel="kuvertüreVoll" placeholder="200 g/Block"/>
+                        <span class="kcalOutput" data-output="kuvertüreVoll">0</span> kcal
+                    </label>
+                </div>
+                <p style="font-size: 14pt; font-weight: bold;">Früchte & Säfte</p>
+                <div>
+                    <label>
+                        Mandarinen (49kcal/100g):
+                        <input type="text" data-lebensmittel="mandarine" placeholder="300 g/Dose"/>
+                        <span class="kcalOutput" data-output="mandarine">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Äpfel (55kcal/100g):
+                        <input type="text" data-lebensmittel="apfel" placeholder="ca. 250 g/Stück"/>
+                        <span class="kcalOutput" data-output="apfel">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Zitronensaft (27kcal/100ml):
+                        <input type="text" data-lebensmittel="zitronensaft" placeholder="ca. 15 ml/EL"/>
+                        <span class="kcalOutput" data-output="zitronensaft">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Apfelessig (24kcal/100ml):
+                        <input type="text" data-lebensmittel="apfelessig" placeholder="ca. 15ml/EL"/>
+                        <span class="kcalOutput" data-output="apfelessig">0</span> kcal
+                    </label>
+                </div>
+                <div>
+                    <label>
                         Balsamico, hell (110kcal/100ml):
-                        <input type="text" data-lebensmittel="balsamicoH" placeholder="ca. 15ml/EL" />
+                        <input type="text" data-lebensmittel="balsamicoH" placeholder="ca. 15ml/EL"/>
                         <span class="kcalOutput" data-output="balsamicoH">0</span> kcal
                     </label>
                 </div>
                 <div>
                     <label>
-                        Mehl (347kcal/100ml):
-                        <input type="text" data-lebensmittel="mehl" placeholder="ca. 15ml/EL" />
-                        <span class="kcalOutput" data-output="mehl">0</span> kcal
-                    </label>
-                </div>
-                <p style="font-size: 14pt; font-weight: bold;">Gewürze & Kräuter</p>
-                <div>
-                    <label>
-                        Zucker (400kcal/100g):
-                        <input type="text" data-lebensmittel="zucker" placeholder="ca. 5g/TL"/>
-                        <span class="kcalOutput" data-output="zucker">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Salz (0kcal/100g):
-                        <input type="text" data-lebensmittel="salz" placeholder="ca. 5g/TL"/>
-                        <span class="kcalOutput" data-output="salz">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Pfeffer, weiß (322kcal/100g):
-                        <input type="text" data-lebensmittel="pfefferW" placeholder="ca. 7g/TL"/>
-                        <span class="kcalOutput" data-output="pfefferW">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Pfeffer, schwarz (285kcal/100g):
-                        <input type="text" data-lebensmittel="pfefferS" placeholder="ca. 7g/TL"/>
-                        <span class="kcalOutput" data-output="pfefferS">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Knoblauchpulver (332kcal/100g):
-                        <input type="text" data-lebensmittel="knoblauchP" placeholder="ca. 6g/TL"/>
-                        <span class="kcalOutput" data-output="knoblauchP">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Paprikapulver (316kcal/100g):
-                        <input type="text" data-lebensmittel="paprikaP" placeholder="ca. 7g/TL"/>
-                        <span class="kcalOutput" data-output="paprikaP">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Currypulver (319kcal/100g):
-                        <input type="text" data-lebensmittel="curry" placeholder="ca. 7g/TL"/>
-                        <span class="kcalOutput" data-output="curry">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Chilipulver (322kcal/100g):
-                        <input type="text" data-lebensmittel="chili" placeholder="ca. 7g/TL"/>
-                        <span class="kcalOutput" data-output="chili">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Muskat (527kcal/100g):
-                        <input type="text" data-lebensmittel="muskat" placeholder="ca. 7g/TL"/>
-                        <span class="kcalOutput" data-output="muskat">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        italienische Kräuter (279kcal/100g):
-                        <input type="text" data-lebensmittel="italKräuter" placeholder="ca. 7g/TL"/>
-                        <span class="kcalOutput" data-output="italKräuter">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Basilikum (268kcal/100g):
-                        <input type="text" data-lebensmittel="basilikum" placeholder="ca. 7g/TL"/>
-                        <span class="kcalOutput" data-output="basilikum">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Oregano (306kcal/100g):
-                        <input type="text" data-lebensmittel="oregano" placeholder="ca. 7g/TL"/>
-                        <span class="kcalOutput" data-output="oregano">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Thymian (276kcal/100g):
-                        <input type="text" data-lebensmittel="thymian" placeholder="ca. 7g/TL"/>
-                        <span class="kcalOutput" data-output="thymian">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Dill, getrocknet (256kcal/100g):
-                        <input type="text" data-lebensmittel="dill" placeholder="ca. 3g/TL"/>
-                        <span class="kcalOutput" data-output="dill">0</span> kcal
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        Lachs-Sahne Gratin (Maggi):
-                        <input type="text" data-lebensmittel="tüte" placeholder="1 Tüte"/>
-                        <span class="kcalOutput" data-output="tüte">0</span> kcal
+                        Zuckerrübensirup (305kcal/100g):
+                        <input type="text" data-lebensmittel="sirup" placeholder="ca. 10 g/TL"/>
+                        <span class="kcalOutput" data-output="sirup">0</span> kcal
                     </label>
                 </div>
 
@@ -741,13 +630,13 @@
                 <div>
                     <label>
                         Kalorien insg.:
-                        <input type="text" data-lebensmittel="gesKalorien" placeholder="1277.48kcal/Gericht"/>
+                        <input type="text" data-lebensmittel="gesKalorien" placeholder="2614.25kcal/Waffelteig"/>
                     </label>
                 </div>
                 <div>
                     <label>
                         Portion insg.:
-                        <input type="text" data-lebensmittel="gesPortion" placeholder="2 Portionen"/>
+                        <input type="text" data-lebensmittel="gesPortion" placeholder="10 Portionen"/>
                     </label>
                 </div>
                 <div class="gesamt">
@@ -763,71 +652,55 @@
     <script>
         //Lebensmittel-Datenbank (Kalorienangaben pro 100g)
         const lebensmittel = {
-            brokkoli: 34,
-            blumenkohl: 25,
-            karotte: 41,
-            knoblauch: 142,
-            lauch: 61,
-            zwiebel: 28,
-            röZwiebel: 590,            
-            tomate: 19,
-            passTomaten: 27,
-            tomateDose: 22,
-            tomatenmark: 116,
-            paprika: 40,
-            kürbis: 63,
-            spargel: 20,
-            hähnchenfleisch: 102,
-            hähnchenbrust: 110,
-            schweinefleisch: 143,
-            rinderhackfleisch: 332,
-            lachsfilet: 215,
-            speckwürfel: 246,
-            nudeln: 359,
-            spaghetti: 356,
-            lasagne: 359,
-            tortelloniS: 235,
-            tortelloniR: 231,
-            jasminReis: 352,
-            basmatiReis: 352,
-            kartoffel: 279,
-            butter: 743,
+            weizenmehl: 347,
+            dinkelmehl: 344,
+            dinkelvollkorn: 334,
+            roggenmehl: 334,
+            backmalz: 371,
+            hefe: 111,
+            zucker: 400,
+            brZucker: 400,
+            vanillezucker: 3200,
+            puderzucker: 400,
+            backpulver: 86,
+            pudding: 13300,
+            kakao: 380,
+            salz: 0,
+            zimt: 272,
+            vanille: 548,
             milch: 64,
             sahne: 293,
-            cremefine7: 150,
-            schmand: 293,
-            joghurt: 64,
-            quark: 64,
+            butter: 743,
+            schmand: 241,
+            quark: 68,
             frischkäse: 243,
-            schmelzSahne: 276,
-            schmelzKräuter: 272,
-            parmesan: 398,
-            mozzarellaGer: 314,
-            goudaGer: 334,
-            emmenGer: 381,
-            cheddarGer: 402,            
-            gemüsebrühe: 166,
-            hühnerbrühe: 207,
-            rinderbrühe: 200,
+            joghurt: 63,
+            margarine: 720,
             sonnenöl: 828,
+            rapsöl: 828,
             olivenöl: 828,
-            balsamicoH: 101,
-            mehl: 347,
-            zucker: 400,
-            salz: 0,
-            pfefferW: 322,
-            pfefferS: 285,
-            knoblauchP: 332,
-            paprikaP: 316,
-            curry: 319,
-            chili: 322,
-            muskat: 527,
-            italKräuter: 279,
-            basilikum: 268,
-            oregano: 306,
-            thymian: 276,
-            dill: 256,            
-            tüte: 48950
+            eier: 8600,
+            eiweiß: 1900,
+            eigelb: 6700,
+            mandelBl: 619,
+            mandeln: 626,
+            haselnüsse: 678,
+            schokoStr: 465,
+            bunteStr: 402,
+            mohn: 522,
+            sesam: 674,
+            leinsam: 514,
+            dinkelflocken: 353,
+            butterkeks: 2175,
+            oreokeks: 5192,
+            kuvertüreZart: 533,
+            kuvertüreVoll: 553,
+            mandarine: 49,
+            apfel: 55,
+            zitronensaft: 27,
+            apfelessig: 24,
+            balsamicoH: 110,
+            sirup: 305
         };
 
         //Funktion zur Berechnung Bereich: Gericht
