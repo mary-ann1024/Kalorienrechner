@@ -5,9 +5,64 @@
     font-family: Arial, Helvetica, sans-serif;
 } */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  padding-top: 0px;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 8pt;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.footer h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 8pt;
+}
+
+.footer img {
+  width: 10em;
+  margin-bottom: 15px;
+}
+
+.links-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 15px;
+  max-width: 40rem;
+}
+
+.links-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.links-column a.active {
+  text-decoration: underline;
+}
+
+.links-column a {
+  text-decoration: none;
+  color: white;
+}
+
+.links-column a:hover {
+  text-decoration: underline;
 }
 
 /* footer {
@@ -15,18 +70,22 @@ body {
   margin-top: -50px;
  } */
 
-.navigation ul {
+.navigation {
     font-family: Garamond, serif;
     font-weight: bold;
     font-size: 16pt;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
     background-color: #333;
-    position:fixed;
+    position: fixed;
+    top: 0;
     width: 100%;
-    z-index: 1;
+    /* padding: 1rem; */
+    text-align: center;
+    z-index: 1000;
+}
+
+.navigation ul {
+    list-style-type: none;
+    overflow: hidden;
 }
   
 .navigation li {
@@ -51,13 +110,21 @@ body {
     background-color: #111;
 }
 
+.container {
+  display: flex;
+  flex: 1;
+  margin-top: 30px;
+}
+
 .rezepte {
-    max-width: 30%;
+    width: 25%;
+    min-width: 200px;
     float: left;
-    margin-top:50px;
+    margin-top: 20px;
 }
 
 .rezepte ul {
+    /* height: 100%; */
     font-family: Garamond, serif;
     font-size: 14pt;
     font-weight: bold;
@@ -83,7 +150,7 @@ body {
     font-size: 10pt;
     text-decoration : none;
     background-color: #333;
-    color : white;
+    color: white;
     font-weight: normal;
     margin: 10px;
 }
@@ -129,11 +196,18 @@ body {
     opacity: 0.8; /*Deckkraft 100%*/
 }
 
-.context {
+/* .context {
     max-width: 70%;
     float: left;
     padding: 10px;
     margin-top:50px;
+} */
+
+.context {
+  width: 75%;
+  flex-grow: 1;
+  margin-top: 30px;
+  padding: 1rem;
 }
 
 div.gallery {
@@ -225,15 +299,16 @@ div.gallery {
 
   .ges p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 7pt;
+    font-size: 8pt;
   }
 
 .feld div {
-    padding-top: 3px;
+    padding-top: 7px;
 }
 
   .feld {
     display: block;
+    margin-top: 20px;
     margin-left: 2px;
     margin-right: 2px;
     padding-top: 0.35em;
@@ -241,6 +316,17 @@ div.gallery {
     padding-left: 0.75em;
     padding-right: 0.75em;
     border: none;
+  }
+
+  .feld p {
+    margin-top: 20px;
+  }
+
+  .extra p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8pt;
+    margin-top: 0;
+    margin-bottom: 5px;
   }
 
   .berechnenButton {
@@ -269,17 +355,69 @@ div.gallery {
 
 .title {
     font-family: Garamond, serif;
+    display: flex;
+    flex-wrap: wrap; /* Erlaubt Umbruch bei kleiner Bildschirmbreite */
+    flex-direction: column; /* Standardmäßig Überschrift über dem Bild */
+    align-items: left; /* Zentriert die Inhalte vertikal */
+    justify-content: space-between; /* Überschrift links, Bild rechts */
+    text-align: left;
+    gap: 20px; 
 }
-.title p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 8pt;
+.title h1 {
+  margin: 0; /* Entfernt unnötigen Abstand */
 }
 
-.title h2 {
+.title img {
+  max-width: 50%; /* Bildgröße anpassen */
+  height: auto;
+}
+
+/* Bei größeren Bildschirmen soll das Bild rechts sein */
+@media (min-width: 768px) {
+  .title {
+      flex-direction: row; /* Überschrift und Bild nebeneinander */
+      align-items: flex-start; /* Überschrift bleibt oben */
+      text-align: left; /* Überschrift linksbündig */
+  }
+
+  .title h1 {
+      flex-basis: 100%; /* Überschrift nimmt die volle Breite ein */
+      text-align: left; /* Falls sie nicht zentriert sein soll */
+  }
+
+  .title img {
+      max-width: 50%; /* Bild nimmt maximal die Hälfte der Breite */
+      height: auto;
+  }
+}
+
+.title p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 8pt;
+  width: 100%; /* Nimmt immer die volle Breite ein */
+  text-align: left;
+}
+
+.subtitle {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 8pt;
+  width: 100%; /* Nimmt immer die volle Breite ein */
+  text-align: left; /* Zentriert für kleine Bildschirme */
+  margin-top: 10px; /* Optional: Abstand nach unten */
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+      text-align: left; /* Linksbündig auf großen Bildschirmen */
+  }
+}
+
+.subtitle h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: normal;
     font-size: 9pt;
-    float: right;
+    margin-top: 5px;
+    /* float: right; */
 }
 
 .context img {
@@ -290,7 +428,7 @@ div.gallery {
     margin-bottom: 20px;
 }
 
-.desc {
+.desc li {
   margin: 20px;
 }
 
@@ -305,20 +443,3 @@ div.gallery {
   color: black;
   text-decoration: none;
 }
-
-
-
-/* .context p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-top: 20px;
-} */
-
-/* .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #777;
-  color: white;
-  text-align: center;
-} */

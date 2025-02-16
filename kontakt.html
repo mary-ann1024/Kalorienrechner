@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="img/icon.png" type="image/png">
-    <title>Bedarf - Kalorienrechner</title>
+    <title>Kontakt - Kalorienrechner</title>
 </head>
 <body>
     <div class="navigation">
@@ -11,7 +11,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="taeglich.html">Täglich</a></li>
             <li><a href="rezepteLi.html">Rezepte</a></li>
-            <li><a class="active" href="bedarf.html">Bedarf</a></li>
+            <li><a href="bedarf.html">Bedarf</a></li>
         </ul>
     </div>
 
@@ -104,7 +104,7 @@
                     <br>
                     <div class="tooltip">
                         <a href="rezepte/kartoffelnHähnchen.html">Kartoffeln mit Hähnchen</a>
-                        <span class="tooltiptext">1/2 Gericht = ca. 758 kcal</span>
+                        <span class="tooltiptext">1/2 Gericht = ca. 652 kcal</span>
                     </div>
                 </li>
 
@@ -257,76 +257,17 @@
 
         <div class="context">
             <div class="title">
-                <h1>Bedarf berechnen</h1>
-                <img src="img/uhr.jpg" alt="Uhr" width="513" height="342">
+                <h1>Kontakt</h1>
             </div>
             <div class="subtitle">
-                <p style="font-size: 9pt;">Was hast du bisher verbrannt und wie viel zu dir genommen?</p>
-                <h2>Trage die Kalorienangaben pro 100g (oder ml) ein oder wie viel Stück du genommen hast</h2>
-            </div>
-
-            <div>
-                <fieldset class="feld">
-                    <legend><h3>Bedarf</h3></legend>
-                    <div>
-                        <label>
-                            Uhrzeit:
-                            <input type="text" data-stunde="" placeholder="volle Stunde (00.0)" />
-                            noch <span class="stundenRest">0</span> Stunden bis Mitternacht
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            Bisher verbraucht:
-                            <input type="text" data-calVerbraucht="" placeholder="kcal" />
-                            noch <span class="nochVerbrennen">0</span> kcal verbrennen (in Ruhe)
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            Bisher gegessen:
-                            <input type="text" data-calGegessen="" placeholder="kcal" />
-                        </label>
-                    </div>
-
-                    <p></p>
-                    <div class="gesamt">
-                        vorraussichtlicher Tagesverbrauch: <span class="verbrauchTag">0</span> kcal
-                    </div>
-                    <div class="ges">
-                        Du darfst noch <span class="gesamtKalorien">0</span> kcal essen um im Defizit zu bleiben.<br>
-                        (Negativ: überm Defizit)
-                    </div>
-                    <p style="font-size: 14pt; font-weight: bold;">Geplant</p>
-                    <div>
-                        <label>
-                            Stand jetzt dürftest du <span class="verbrauchTagDef">0</span> kcal essen heute.<br>
-                            geplant zu essen:
-                            <input type="text" data-calPlanessen="" placeholder="kcal" />
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            Bisher verbraucht:
-                            <input type="text" data-calVerbrauchtP="" placeholder="kcal" />
-                        </label>
-                    </div>
-
-                    <p></p>
-                    <div class="gesamt">
-                        du müsstest heute <span class="sollVerbrauchtag">0</span> kcal verbrauchen um im Defizit zu bleiben.
-                    </div>
-                    <div class="ges">
-                        dazu fehlen noch <span class="gesamtBrennen">0</span> kcal, die du verbrennen musst.<br>
-                        (Negativ: musst nichts mehr verbrennen)
-                    </div>
-                    <p></p>
-                    <button class="berechnenButton">Bedarf berechnen</button>
-                    <button class="resetButton">Refresh</button>
-                </fieldset>
+                <p>Marie Süphke</p>
+                <p>E-Mail: <a href="mailto:marie.suephke@gmx.de">marie.suephke@gmx.de</a></p>
+                <br>
+                <p>Diese Website wird ausschließlich für private Zwecke verwendet.</p>
             </div>
         </div>
     </div>
+
     <footer class="footer">
         <img src="img/icon3.png">
         <div class="links-container">
@@ -334,7 +275,7 @@
                 <h1>Navigation</h1>
                 <a href="index.html">Home</a>
                 <a href="taeglich.html">Täglich</a>
-                <a class="active" href="bedarf.html">Bedarf</a>
+                <a href="bedarf.html">Bedarf</a>
             </div>
             <div class="links-column">
                 <h1>Rezepte</h1>
@@ -346,7 +287,7 @@
                 <h1>Rechtliches</h1>
                 <a href="impressum.html">Impressum</a>
                 <a href="datenschutz.html">Datenschutz</a>
-                <a href="kontakt.html">Kontakt</a>
+                <a class="active" href="kontakt.html">Kontakt</a>
             </div>
         </div>
         <div>
@@ -354,63 +295,5 @@
             <p>© 2025 Marie Süphke. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
-
-    <script>
-        // Nutzer- und feste Eingaben aus HTML-Feldern
-        const berechnenButton = document.querySelector('.berechnenButton');
-        const resetButton = document.querySelector('.resetButton');
-
-        // Event Listener für den Berechnen-Button
-        berechnenButton.addEventListener('click', () => {
-            //Nutzer-eingaben
-            const calVerbraucht = parseFloat(document.querySelector('[data-calVerbraucht]').value) || 0;
-            const calVerbrauchtP = parseFloat(document.querySelector('[data-calVerbrauchtP]').value) || 0;
-            const stunde = parseFloat(document.querySelector('[data-stunde]').value) || 0;
-            const calGegessen = parseFloat(document.querySelector('[data-calGegessen]').value) || 0;
-            const calPlanessen = parseFloat(document.querySelector('[data-calPlanessen]').value) || 0;
-
-            const ruheVerbrauch = 52; // kcal/h
-            const calDefizit = 800; // kcal
-
-            //Berechnungen
-            const restStunden = 24 - stunde; // Verbleibende Stunden bis Mitternacht
-            const nochVerbrauchen = ruheVerbrauch * restStunden; // Verbrauch in den restlichen Stunden
-            const tagesVerbrauch = nochVerbrauchen + calVerbraucht; // Gesamter Tagesverbrauch
-            const tagesVerbrauchP = nochVerbrauchen + calVerbrauchtP; // Gesamter Tagesverbrauch
-            const tagesVerbrauchsoll = calPlanessen + calDefizit; // Soll Gesamter Tagesverbrauch
-            const mitDefizit = tagesVerbrauch - calDefizit; // Verbrauch unter Berücksichtigung des Defizits
-            const nochOffen = mitDefizit - calGegessen; // Übrige Kalorien, die noch offen sind
-            const nochBrennen = tagesVerbrauchsoll - tagesVerbrauch; // Übrige Kalorien, die noch offen sind vom Soll
-
-            //berechnete Werte anzeigen
-            document.querySelector('.stundenRest').textContent = restStunden.toFixed(2);
-            document.querySelector('.nochVerbrennen').textContent = nochVerbrauchen.toFixed(2);
-            document.querySelector('.verbrauchTag').textContent = tagesVerbrauch.toFixed(2);
-            document.querySelector('.verbrauchTagDef').textContent = mitDefizit.toFixed(2);
-            document.querySelector('.sollVerbrauchtag').textContent = tagesVerbrauchsoll.toFixed(2);
-            document.querySelector('.gesamtKalorien').textContent = nochOffen.toFixed(2);
-            document.querySelector('.gesamtBrennen').textContent = nochBrennen.toFixed(2);
-        });
-
-        //Event Listener für den Reset-Button
-        resetButton.addEventListener('click', () => {
-            //für Eingabefelder
-            document.querySelector('[data-calVerbraucht]').value = '';
-            document.querySelector('[data-calVerbrauchtP]').value = '';
-            document.querySelector('[data-stunde]').value = '';
-            document.querySelector('[data-calGegessen]').value = '';
-            document.querySelector('[data-calPlanessen]').value = '';
-
-            //für berechnete Werte
-            document.querySelector('.verbrauchTag').textContent = '0';
-            document.querySelector('.gesamtKalorien').textContent = '0';
-            document.querySelector('.stundenRest').textContent = '0';
-            document.querySelector('.nochVerbrennen').textContent = '0';
-            document.querySelector('.verbrauchTagDef').textContent = '0';
-            document.querySelector('.sollVerbrauchtag').textContent = '0';
-            document.querySelector('.gesamtBrennen').textContent = '0';
-        });
-    </script>
-    
 </body>
 </html>
