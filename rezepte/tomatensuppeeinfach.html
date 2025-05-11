@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="icon" href="../img/icon.png" type="image/png">
-    <title>Kartoffeln mit Hähnchen - Kalorienrechner</title>
+    <title>Tomatensuppe - Kalorienrechner</title>
 </head>
 <body>
     <div class="navigation">
@@ -103,7 +103,7 @@
                     </div>
                     <br>
                     <div class="tooltip">
-                        <a class="click" href="kartoffelnHähnchen.html">Kartoffeln mit Hähnchen</a>
+                        <a href="kartoffelnHähnchen.html">Kartoffeln mit Hähnchen</a>
                         <span class="tooltiptext">1/2 Gericht = ca. 902 kcal</span>
                     </div>
                 </li>
@@ -111,7 +111,7 @@
                 <li>Suppen
                     <br>
                     <div class="tooltip">
-                        <a href="tomatensuppe.html">Tomatensuppe</a>
+                        <a class="click" href="tomatensuppe.html">Tomatensuppe</a>
                         <span class="tooltiptext">1/2 Gericht = ca. 523 kcal</span>
                     </div>
                     <br>
@@ -262,10 +262,10 @@
 
         <div class="context">
             <div class="title">
-                <h1>Kartoffeln mit Hähnchen</h1>
-                <p>Das Rezept ist für zwei Personen.</p>
-                <p>1/2 Gericht = ca. 902 kcal (Portion pro Person).</p>
-                <img src="../img/kartoffelnhähnchen.jpg" alt="KartoffelnHähnchen" width="513" height="342">
+                <h1>Einfache Tomatensuppe</h1>
+                <p>Das Rezept ist für 2 Personen.</p>
+                <p>1/2 Gericht & Brot = ca. 424 kcal (Portion pro Person).</p>
+                <img src="../img/tomatensuppeeinfach.jpg" alt="Einfache Tomatensuppe" width="513" height="342">
             </div>
             <div class="subtitle">
                 <h2>Trage die Kalorienangaben pro 100g (oder ml) ein oder wie viel Stück du genommen hast</h2>
@@ -276,52 +276,66 @@
                     <legend><h3>Gericht</h3></legend>
                     <div>
                         <label>
-                            1/4 Hähnchen, gewürzt & ohne Knochen (ca. 630g):
-                            <input type="text" data-lebensmittel="hähnchen" placeholder="630g"/>
-                            <span class="kcalOutput" data-output="hähnchen">0</span> kcal
-                        </label>
-                    </div>
-                    <p style="font-size: 14pt; font-weight: bold;">Beilage</p>
-                    <div>
-                        <label>
-                            200g Kartoffeln (pro Person):
-                            <input type="text" data-lebensmittel="kartoffeln" placeholder="400g"/>
-                            <span class="kcalOutput" data-output="kartoffeln">0</span> kcal
+                            1200g gehackte Tomaten:
+                            <input type="text" data-lebensmittel="tomaten" placeholder="1200g"/>
+                            <span class="kcalOutput" data-output="tomaten">0</span> kcal
                         </label>
                     </div>
                     <div>
                         <label>
-                            1 EL (15ml) Sonnenblumenöl:
-                            <input type="text" data-lebensmittel="sonnenöl" placeholder="828kcal/100ml"/>
-                            <span class="kcalOutput" data-output="sonnenöl">0</span> kcal
+                            1 Zwiebel (85g):
+                            <input type="text" data-lebensmittel="zwiebeln" placeholder="90g"/>
+                            <span class="kcalOutput" data-output="zwiebeln">0</span> kcal
                         </label>
                     </div>
                     <div>
                         <label>
-                            1 EL (15ml) Olivenöl:
-                            <input type="text" data-lebensmittel="olivenöl" placeholder="828kcal/100ml"/>
-                            <span class="kcalOutput" data-output="olivenöl">0</span> kcal
+                            2 Knoblauchzehen (8g):
+                            <input type="text" data-lebensmittel="knoblauch" placeholder="8g"/>
+                            <span class="kcalOutput" data-output="knoblauch">0</span> kcal
                         </label>
                     </div>
                     <div>
                         <label>
-                            0,5 TL (2,5g) Salz:
-                            <input type="text" data-lebensmittel="salz" placeholder="0.5 TL"/>
+                            1 EL Tomatenmark (20g):
+                            <input type="text" data-lebensmittel="tomatenmark" placeholder="20g"/>
+                            <span class="kcalOutput" data-output="tomatenmark">0</span> kcal
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            1 EL Zucker (16g):
+                            <input type="text" data-lebensmittel="zucker" placeholder="16g"/>
+                            <span class="kcalOutput" data-output="zucker">0</span> kcal
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            1,5 TL Salz (7,5g):
+                            <input type="text" data-lebensmittel="salz" placeholder="7.5g"/>
                             <span class="kcalOutput" data-output="salz">0</span> kcal
                         </label>
                     </div>
                     <div>
                         <label>
-                            0,5 TL (3,5g) Paprikapulver:
-                            <input type="text" data-lebensmittel="paprika" placeholder="0.5 TL"/>
-                            <span class="kcalOutput" data-output="paprika">0</span> kcal
+                            3 EL Olivenöl (45ml):
+                            <input type="text" data-lebensmittel="öl" placeholder="3 EL"/>
+                            <span class="kcalOutput" data-output="öl">0</span> kcal
+                        </label>
+                    </div>
+                    <p style="font-size: 14pt; font-weight: bold;">Beilage</p>
+                    <div>
+                        <label>
+                            60g Reis (pro Person):
+                            <input type="text" data-lebensmittel="reis" placeholder="50g"/>
+                            <span class="kcalOutput" data-output="reis">0</span> kcal
                         </label>
                     </div>
                     <div>
                         <label>
-                            0,5 TL (3,5g) Pfeffer:
-                            <input type="text" data-lebensmittel="pfeffer" placeholder="0.5 TL"/>
-                            <span class="kcalOutput" data-output="pfeffer">0</span> kcal
+                            2 Scheiben Landkruste:
+                            <input type="text" data-lebensmittel="brot" placeholder="2 Stück"/>
+                            <span class="kcalOutput" data-output="brot">0</span> kcal
                         </label>
                     </div>
                     <div class="gesamt">
@@ -332,16 +346,16 @@
                     <button class="resetButton">Refresh</button>
                 </fieldset>
             </div>
-
-            <p>_______________________________________________________________</p>
         
+            <p>_______________________________________________________________</p>
+
             <div>
                 <fieldset class="feld">
                     <legend><h3>Portion</h3></legend>
                     <div>
                         <label>
                             Kalorien insg.:
-                            <input type="text" data-lebensmittel="gesKalorien" placeholder="1803.13kcal/Gericht"/>
+                            <input type="text" data-lebensmittel="gesKalorien" placeholder="848.36kcal/Gericht"/>
                         </label>
                     </div>
                     <div>
@@ -393,13 +407,15 @@
     <script>
         //Lebensmittel-Datenbank (Mengenangaben pro Lebensmittel)
         const lebensmittel = {
-            hähnchen: 199,
-            kartoffeln: 70,
-            sonnenöl: 15,
-            olivenöl: 15,
+            tomaten: 22,
+            zwiebeln: 28,
+            knoblauch: 142,
+            tomatenmark: 116,
+            zucker: 400,
             salz: 0,
-            paprika: 2212,
-            pfeffer: 1995,
+            öl: 12420,
+            reis: 352,
+            brot: 7600
         };
 
         //Funktion zur Berechnung Bereich: Gericht
@@ -442,9 +458,9 @@
 
             //Gesamtkalorien im Container zurücksetzen
             const gesamtKcalElement = container.querySelector('.gesamtKcal');
-                if (gesamtKcalElement) {
-                    gesamtKcalElement.textContent = '0';
-                }
+            if (gesamtKcalElement) {
+                gesamtKcalElement.textContent = '0';
+            }
         }
 
         //Funktion zur Berechnung Bereich: Portion
@@ -452,30 +468,31 @@
             //Eingabefelder auslesen
             const kalorien = parseFloat(container.querySelector('[data-lebensmittel="gesKalorien"]').value) || 0;
             const portion = parseFloat(container.querySelector('[data-lebensmittel="gesPortion"]').value) || 0;
-            
+
             //Berechnung
             const kcalProPortion = kalorien / portion || 0;
-            
+
             //Berechnete Werte anzeigen
             container.querySelector('.kcalPortion').textContent = kcalProPortion.toFixed(2);
         }
 
         //Event-Deglaration: Event-Listener für Klick innerhalb <body>
         document.body.addEventListener('click', (event) => {
-        
+
             //Event für Berechnen-Button
             if (event.target.matches('.berechnenButton')) {
                 const container = event.target.closest('fieldset');
+                
                 //Berechnen-Button Bereich: Portion
                 if (container.querySelector('[data-lebensmittel="gesKalorien"]')) {
                     berechneScheiben(container);
-                
+
                 //Berechnen-Button Bereich: Gericht
                 } else {
                     berechneKalorien(container);
                 }
             }
-
+        
             //Event für Reset-Button
             if (event.target.matches('.resetButton')) {
                 const container = event.target.closest('fieldset');
